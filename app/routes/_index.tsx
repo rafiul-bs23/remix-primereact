@@ -1,7 +1,10 @@
 import type { MetaFunction } from "@remix-run/node"
 import { Button } from "primereact/button"
-import { Link } from "@remix-run/react"
 import "~/styles/home.css"
+import { useNavigate } from "@remix-run/react"
+
+import 'primereact/resources/themes/saga-blue/theme.css';
+import 'primereact/resources/primereact.min.css'; 
 
 export const meta: MetaFunction = () => {
   return [
@@ -11,24 +14,15 @@ export const meta: MetaFunction = () => {
 }
 
 export default function Index() {
+  const navigate = useNavigate();
   const handleClick = () => {
-    console.log("hello from prime")
+    navigate("/notes");
   }
   return (
     <main id="content">
       <h1>A better way to keeping track of your notes</h1>
       <p>Try this and never loose track of your notes again!</p>
-      <p id="cta">
-        <Link to="/notes">Try now!</Link>
-      </p>
-      <button
-        onClick={() => {
-          console.log("clicked")
-        }}
-      >
-        click
-      </button>
-      <Button label="prime" onClick={handleClick} />
+      <Button label="Try Now!" onClick={handleClick} />
     </main>
   )
 }
