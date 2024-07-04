@@ -1,14 +1,4 @@
-import styles from "./NoteList.css"
-
-// NoteList.propTypes = {
-//     notes: PropTypes.arrayOf(
-//       PropTypes.shape({
-//         id: PropTypes.string.isRequired,
-//         title: PropTypes.string.isRequired,
-//         content: PropTypes.string.isRequired,
-//       })
-//     ).isRequired,
-//   };
+import "~/components/NoteList.css"
 
 type props = {
   id: string
@@ -48,7 +38,3 @@ function NoteList({ notes }: { notes: props[] }) {
 }
 
 export default NoteList
-
-export function links() {
-  return [{ rel: "stylesheet", href: styles }]
-}
