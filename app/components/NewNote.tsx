@@ -1,21 +1,24 @@
-import "./NewNote.css"
+import { InputText } from 'primereact/inputtext';
+import { InputTextarea } from 'primereact/inputtextarea';
+import { Button } from 'primereact/button';
+import './NewNote.css';
 
 function NewNote() {
   return (
     <form method="post" id="note-form">
-      <p>
+      <div className="p-field">
         <label htmlFor="title">Title</label>
-        <input type="text" id="title" name="title" required />
-      </p>
-      <p>
+        <InputText id="title" name="title" required />
+      </div>
+      <div className="p-field">
         <label htmlFor="content">Content</label>
-        <textarea id="content" name="content" rows={5} required />
-      </p>
+        <InputTextarea id="content" name="content" rows={5} required />
+      </div>
       <div className="form-actions">
-        <button>Add Note</button>
+        <Button label="Add Note" icon="pi pi-plus" />
       </div>
     </form>
-  )
+  );
 }
 
-export default NewNote
+export default NewNote;

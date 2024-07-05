@@ -8,6 +8,10 @@ import {
 import "./styles/main.css";
 import MainNavigation from "./components/MainNavigation";
 // import "./tailwind.css";
+import 'primereact/resources/themes/saga-blue/theme.css'; // or any other theme
+import 'primereact/resources/primereact.min.css';
+import 'primeicons/primeicons.css';
+
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
